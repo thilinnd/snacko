@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="ecommerce-detail.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(242, 242, 195, 0.5), rgba(242, 242, 195, 1.0));
+            margin: 10px;
+        }
+
+        .thietlapchung {
+            background-image: linear-gradient(to right, rgb(242, 242, 195, 0.5), rgba(242, 242, 195, 1.0));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#product-rating').rating({
+                step: 1,          // Bước giá trị mỗi lần đánh giá (1 sao)
+                stars: 5,         // Tổng số sao
+                showClear: false, // Ẩn nút xóa
+                showCaption: false // Ẩn chú thích giá trị
+            });
+        });
+    </script>
+    <!-- Tạo navigation-->
+    <nav class="thietlapchung navbar navbar-default">
+        <div class=" thietlapchung container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <!-- Nút toggle để mở menu trên thiết bị di động -->
+                <button type="button" class="navbar-toggle collapsed" data- toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Logo hoặc tên thương hiệu -->
+                <a class="thietlapchung navbar-brand" href="#">
+                    <p style="text-align: center; color: #925607"> Snacko </p>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Nội dung của thanh điều hướng, bao gồm các liên kết -->
+            <div class="thietlapchung collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="thietlapchung nav navbar-nav">
+
+                    <li class="active"><a href="#"> Trang chủ <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <!-- Menu thả xuống với các liên kết khác nhau -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false"> Sản phẩm <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Hạt dinh dưỡng</a></li>
+                            <li><a href="#">Bánh gấu</a></li>
+                            <li><a href="#">Nước ngọt</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> Về Snacko </a></li>
+                </ul>
+                <!-- Form tìm kiếm trên thanh điều hướng -->
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Tìm kiếm</button>
+
+                </form>
+                <!-- Phần menu bên phải của thanh điều hướng -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"> Đăng nhập </a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <nav class="thietlapchung navbar navbar-default">
+        <div class="thietlapchung container-fluid">
+            <img style="height: 50px; width: 50px" alt="Snacko" src="img\logo.png">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Form tìm kiếm dành cho thiết bị di động (hiển thị khi màn hình nhỏ) -->
+    <form class="visible-xs-inline-block" style="margin-top:10px">
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+    </form>
+
+        <div class="row">
+
+            <!-- Phần danh mục (Categories) -->
+            <div class="col-sm-4 col-md-3">
+                <h3>Danh mục sản phẩm</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge">4</span> Hạt dinh dưỡng
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">4</span> Bánh gấu
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge">5</span> Nước ngọt
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phần chi tiết sản phẩm -->
+            <div class="col-sm-8 col-md-9">
+                <div class="thumbnail">
+                    <div class="row">
+                        <div class="col-sm-6">
+
+                            <!-- Hình ảnh lớn của sản phẩm -->
+                            <img class="img-responsive" src="img\banhgau1.jpg" alt="" />
+                            <!-- Hình ảnh thu nhỏ -->
+                            <div class="thumbnails row">
+                                <div class="col-xs-3">
+                                    <a href="#">
+                                        <img src="img\banhgau2.jpg" alt="" class="img-thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="#">
+                                        <img src="img\banhgau3.jpg" alt="" class="img-thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="#">
+                                        <img src="img\banhgau44.jpg" alt="" class="img-thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <!-- Thông tin mô tả sản phẩm -->
+                            <h4 class="pull-right">10.000đ</h4>
+                            <h4><a href="product.html">Bánh gấu mix vị</a></h4>
+                            <p style="text-align: justify">
+                                Bánh gấu với ba hương vị hấp dẫn: kem truyền thống, socola nhân kem, và chùm ngây nhân
+                                kem. Hương vị thơm ngon, vỏ bánh giòn tan kết hợp cùng lớp nhân kem mịn màng bên trong,
+                                mang đến trải nghiệm thú vị và ngon miệng. Thích hợp làm món ăn nhẹ cho cả gia đình, đặc
+                                biệt phù hợp với các bé nhỏ.
+                            </p>
+                            <form role="form">
+                                <div class="number form-group">
+                                    <label>Number</label>
+                                    <input type="number" class="input-sm" id="number" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Vị</label>
+                                    <select id="color">
+                                        <option>Cà phê</option>
+                                        <option>Truyền thống</option>
+                                        <option>Chùm ngây</option>
+                                        <option>Mix 3 vị </option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default">Liên hệ shop</button>
+                                    <button type="submit" class="btn btn-success">Thêm vào giỏ hàng</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Phần mô tả thêm -->
+                <div class="description">
+                    <p>Đánh giá cho shop i</p>
+                </div>
+
+                <!--* Đánh giá sản phẩm -->
+                <div class="ratings">
+                    <p class="pull-right">3 reviews</p>
+                    <div class="ratings">
+                        <p class="pull-right"><a href="product.html#comments">10 reviews</a></p>
+                        <input id="product-rating" name="rating" class="rating" data-size="xs" value="4"
+                            data-show-clear="false" data-show-caption="false">
+                    </div>
+                </div>
+
+                <div class="well">
+                    <div class="text-right">
+                        <a class="btn btn-success"> Để lại đánh giá</a>
+                    </div>
+                </div>
+                <!--* Tạo comments  -->
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        Mr. Tuấn Nguyễn
+                        <span class="pull-right">1 day ago</span>
+                        <p>Từ <em> TP Hồ Chí Minh </em></p>
+                        <p style="text-align: justify">
+                            Bánh gấu ngon, tôi đã mua hết 10 bịch
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phần trạng thái đơn hàng -->
+                <div class="col-sm-8 col-md-9">
+                    <h3>Orders Status</h3>
+                    <div class="thumbnail">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img class="img-responsive" src="http://placehold.it/750x600" alt="" />
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="product.html">Bánh gấu mix vị</a>
+                            </div>
+                            <div class="col-sm-1">
+                                1
+                            </div>
+                            <div class="col-sm-2">
+                                20.000đ
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-sm btn-success">
+                                    Hoàn thành</button>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="#">1 tin nhắn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
